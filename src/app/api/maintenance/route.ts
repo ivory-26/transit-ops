@@ -23,7 +23,7 @@ export async function GET() {
       orderBy: { createdAt: "desc" },
       include: {
         vehicle: {
-          select: { fleetCode: true, model: true },
+          select: { fleetCode: true, model: true, registrationNo: true },
         },
       },
     });
@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
         data: result.data,
         include: {
           vehicle: {
-            select: { fleetCode: true, model: true },
+            select: { fleetCode: true, model: true, registrationNo: true },
           },
         },
       });

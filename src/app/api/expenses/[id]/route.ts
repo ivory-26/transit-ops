@@ -31,7 +31,7 @@ export async function GET(
       where: { id },
       include: {
         vehicle: {
-          select: { fleetCode: true, model: true },
+          select: { fleetCode: true, model: true, registrationNo: true },
         },
       },
     });
@@ -80,7 +80,7 @@ export async function PATCH(
       data: result.data,
       include: {
         vehicle: {
-          select: { fleetCode: true, model: true },
+          select: { fleetCode: true, model: true, registrationNo: true },
         },
       },
     });

@@ -1,5 +1,4 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { isPrismaError, PrismaErrorCode } from "@/lib/prisma-errors";
 import { prisma } from "@/lib/prisma";
 import { createTripSchema } from "@/lib/validators/trip.schema";
 import { requireAuthenticatedProfile, requireRole } from "@/lib/auth/access";
